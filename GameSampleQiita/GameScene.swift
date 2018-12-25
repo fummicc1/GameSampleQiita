@@ -13,10 +13,10 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        let redCircle = SKShapeNode(circleOfRadius: 30)
+        let blueCircle = SKShapeNode(circleOfRadius: 30)
         
-        redCircle.fillColor = .blue
-        redCircle.strokeColor = .blue
+        blueCircle.fillColor = .blue
+        blueCircle.strokeColor = .blue
         
         let biggerCircleAction = SKAction.scale(to: 5, duration: 1.0)
         
@@ -26,9 +26,9 @@ class GameScene: SKScene {
         
         let allAction = SKAction.sequence([ biggerCircleAction, smallCircleAction, hideAction ])
         
-        redCircle.run(allAction)
+        blueCircle.run(allAction)
         
-        addChild(redCircle)
+        addChild(blueCircle)
         
     }
 }
